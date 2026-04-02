@@ -1,4 +1,4 @@
-import { useEffect, useState } from "./hooks/index";
+import { useEffect, useMemo, useState } from "./hooks/index";
 
 // useState demo
 const useStateDemo = () => {
@@ -22,7 +22,18 @@ const useEffectDemo = () => {
 };
 void useEffectDemo;
 
+// useMemo demo
+const useMemoDemo = () => {
+  const [count, setCount] = useState(1);
+  const memoizedValue = useMemo(() => count() * 2);
+  console.log("useMemo: ", memoizedValue());
+  setCount(2);
+  console.log("useMemo: ", memoizedValue());
+};
+void useMemoDemo;
+
 (() => {
   // useStateDemo();
-  useEffectDemo();
+  // useEffectDemo();
+  useMemoDemo();
 })();

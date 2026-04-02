@@ -1,3 +1,3 @@
-const effectStack: any[] = [];
+const effectStack: Effect[] = [];
 
 export default effectStack;
