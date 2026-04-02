@@ -25,10 +25,10 @@ void useEffectDemo;
 // useMemo demo
 const useMemoDemo = () => {
   const [count, setCount] = useState(1);
-  const memoizedValue = useMemo(() => count() * 2);
-  console.log("useMemo: ", memoizedValue());
+  const doubleCount = useMemo(() => count() * 2);
+  console.log("useMemo: ", doubleCount());
   setCount(2);
-  console.log("useMemo: ", memoizedValue());
+  console.log("useMemo: ", doubleCount());
 };
 void useMemoDemo;
 
